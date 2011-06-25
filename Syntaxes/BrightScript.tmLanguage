@@ -14,7 +14,7 @@
 	<key>foldingStopMarker</key>
 	<string>(?i)^\s*End (Class|Function|Sub|Property)\s*$</string>
 	<key>keyEquivalent</key>
-	<string>^~A</string>
+	<string>^~B</string>
 	<key>name</key>
 	<string>BrightScript</string>
 	<key>patterns</key>
@@ -77,19 +77,19 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(REM ).*$\n?</string>
+			<string>^\s*?(REM|Rem|rem).*$\n?</string>
 			<key>name</key>
 			<string>comment.line.rem.brs</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(If|Then|Else|ElseIf|End If|While|Wend|For|To|Each|In|Step|Case|Select|End Select|Return|Continue|Do|Until|Loop|Next|With|Exit Do|Exit For|Exit Function|Exit Property|Exit Sub)\b)</string>
+			<string>(?i:\b(If|Then|ElseIf|Else If|Else|EndIf|End If|For|To|Next|Step|For Each|In|Next|Exit For|While|End While|Exit While|Function|End Function|As|Return|Sub|End Sub|Print|Goto|Dim|End|Stop)\b)</string>
 			<key>name</key>
 			<string>keyword.control.brs</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>=|&gt;=|&lt;|&gt;|&lt;|&lt;&gt;|\+|-|\*|\^|&amp;|\b(?i:(Mod|And|Not|Or|Xor|Is))\b</string>
+			<string>=|&gt;=|&lt;zz|&gt;|&lt;|&lt;&gt;|\+|-|\*|\/|\^|&amp;|\b(?i:(And|Not|Or))\b</string>
 			<key>name</key>
 			<string>keyword.operator.brs</string>
 		</dict>
@@ -101,13 +101,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(Private|Public|Default)\b)</string>
-			<key>name</key>
-			<string>storage.modifier.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(Empty|False|Nothing|Null|True)\b)</string>
+			<string>(?i:\b(Empty|False|Nothing|Null|True|Invalid)\b)</string>
 			<key>name</key>
 			<string>constant.language.brs</string>
 		</dict>
@@ -142,6 +136,12 @@
 					<key>name</key>
 					<string>constant.character.escape.apostrophe.brs</string>
 				</dict>
+				<dict>
+					<key>match</key>
+					<string>(roImageWidget|roResourceManager|roClockWidget)</string>
+					<key>name</key>
+					<string>entity.other.inherited-class.brs</string>
+				</dict>
 			</array>
 		</dict>
 		<dict>
@@ -160,7 +160,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(Application|ObjectContext|Request|Response|Server|Session)\b)</string>
+			<string>(?i:\b((if(XML(Element|List)|MessagePort|B(yteArray|oolean|rSub)|String(Ops)?|Int|Enum|Float|List|A(ssociativeArray|rray))|ro(R(ss(Parser|Article)|e(sourceManager|ctangle|ad(File|WriteFile)|gistry(Section)?))|G(pio(Button|ControlPort)|lobal)|XML(Element|List)|MessagePort|B(yteArray|oolean|r(Sub|ightPackage))|S(ystemTime|t(orageInfo|ring)|erialPort)|NetworkConfiguration|C(ontrol(Down|Up|Port)|lockWidget|reateFile)|T(imer|ouchScreen|ext(Field|Widget))|I(RRemote|n(t|valid)|mage(Player|Widget))|D(eviceInfo|at(eTime|agram(Receiver|Sender)))|Url(Transfer|Event)|Video(Mode|Input|Player|Event)|Keyboard(Press)?|Quadravox(Button|SNS5)|Float|List|A(ssociativeArray|udio(Player|Event)|ppendFile|rray))))\b)</string>
 			<key>name</key>
 			<string>support.class.brs</string>
 		</dict>
@@ -178,7 +178,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(Lock|Unlock|SetAbort|SetComplete|BianryRead|AddHeader|AppendToLog|BinaryWrite|Clear|End|Flush|Redirect|Write|CreateObject|HTMLEncode|MapPath|URLEncode|Abandon)\b)</string>
+			<string>(?i:\b((R(nd|ight|un|e(set(Index)?|ad(File|AsciiFile)|move(Head|Tail|Index)|bootSystem))|Ge(nXML(Header)?|t(Message|Bo(olean|dy)|S(tring|ignedByte|ub)|Head|Name(dElements)?|ChildElements|T(ext|ail)|In(t(erface)?|dex)|Ent(ityEncode|ry)|Float|LastRun(RuntimeError|CompileError)|Attributes))|M(id|D5|atchFiles)|Bo(olean|x)|S(hift|tr(i(ng)?)?|i(n|mplify)|et(Resize|ModeCaseSensitive|Bo(olean|dy)|S(tring|ub)|Name|Int|Entry|Float)|qr|leep|gn)|HasAttribute|Next|C(sng|hr|o(s|unt|pyFile)|dbl|lear|reate(Object|Directory))|T(ype|o(Base64String|HexString|kenize|AsciiString)|an|rim)|I(s(N(ext|ame)|Empty|LittleEndianCPU)|n(str|t(e(rface|ger))?|valid))|Object|D(ynamic|o(uble|esExist)|elete(Directory|File)?)|U(nshift|Case|pTime)|P(o(stMessage|p)|ush|eek|arse)|Exp|V(oid|al)|F(ix|ormatDrive|unction|loat|rom(Base64String|HexString|AsciiString))|W(hile|ait(Message)?|rite(File|AsciiFile))|L(istDir|o(okup|g)|Case|e(n|ft))|A(s(c)?|tn|dd(Replace|BodyElement|Head|Tail|Element(WithBody)?|Attribute)|ppend(String|File)?|bs)))\b)</string>
 			<key>name</key>
 			<string>support.function.brs</string>
 		</dict>
@@ -190,21 +190,9 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(Array|Add|Asc|Atn|CBool|CByte|CCur|CDate|CDbl|Chr|CInt|CLng|Conversions|Cos|CreateObject|CSng|CStr|Date|DateAdd|DateDiff|DatePart|DateSerial|DateValue|Day|Derived|Math|Escape|Eval|Exists|Exp|Filter|FormatCurrency|FormatDateTime|FormatNumber|FormatPercent|GetLocale|GetObject|GetRef|Hex|Hour|InputBox|InStr|InStrRev|Int|Fix|IsArray|IsDate|IsEmpty|IsNull|IsNumeric|IsObject|Item|Items|Join|Keys|LBound|LCase|Left|Len|LoadPicture|Log|LTrim|RTrim|Trim|Maths|Mid|Minute|Month|MonthName|MsgBox|Now|Oct|Remove|RemoveAll|Replace|RGB|Right|Rnd|Round|ScriptEngine|ScriptEngineBuildVersion|ScriptEngineMajorVersion|ScriptEngineMinorVersion|Second|SetLocale|Sgn|Sin|Space|Split|Sqr|StrComp|String|StrReverse|Tan|Time|Timer|TimeSerial|TimeValue|TypeName|UBound|UCase|Unescape|VarType|Weekday|WeekdayName|Year)\b)</string>
-			<key>name</key>
-			<string>support.function.vb.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
 			<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\b</string>
 			<key>name</key>
 			<string>constant.numeric.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(vbtrue|fvbalse|vbcr|vbcrlf|vbformfeed|vblf|vbnewline|vbnullchar|vbnullstring|vbtab|vbverticaltab|vbbinarycompare|vbtextcomparevbsunday|vbmonday|vbtuesday|vbwednesday|vbthursday|vbfriday|vbsaturday|vbusesystemdayofweek|vbfirstjan1|vbfirstfourdays|vbfirstfullweek|vbgeneraldate|vblongdate|vbshortdate|vblongtime|vbshorttime|vbobjecterror|vbEmpty|vbNull|vbInteger|vbLong|vbSingle|vbDouble|vbCurrency|vbDate|vbString|vbObject|vbError|vbBoolean|vbVariant|vbDataObject|vbDecimal|vbByte|vbArray)\b)</string>
-			<key>name</key>
-			<string>support.type.vb.brs</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
