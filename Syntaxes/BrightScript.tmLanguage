@@ -10,9 +10,9 @@
 		<string>bas</string>
 	</array>
 	<key>foldingStartMarker</key>
-	<string>(?i)^\s*(Public|Private)?\s*(Class|Function|Sub|Property)\s*([a-zA-Z_]\w*)\s*(\(.*\)\s*)?$</string>
+	<string>(?i)^\s*(sub|if|f(or( each)?|unction)|while)\s*([a-zA-Z_]\w*)\s*(\(.*\)\s*)?$</string>
 	<key>foldingStopMarker</key>
-	<string>(?i)^\s*End (Class|Function|Sub|Property)\s*$</string>
+	<string>(?i)^\s*(next|e(nd(if| (sub|if|function))|xit( while)?))\s*$</string>
 	<key>keyEquivalent</key>
 	<string>^~B</string>
 	<key>name</key>
@@ -82,30 +82,6 @@
 			<string>comment.line.rem.brs</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>(?i:\b(If|Then|ElseIf|Else If|Else|EndIf|End If|For|To|Next|Step|For Each|In|Next|Exit For|While|End While|Exit While|Function|End Function|As|Return|Sub|End Sub|Print|Goto|Dim|End|Stop)\b)</string>
-			<key>name</key>
-			<string>keyword.control.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>=|&gt;=|&lt;zz|&gt;|&lt;|&lt;&gt;|\+|-|\*|\/|\^|&amp;|\b(?i:(And|Not|Or))\b</string>
-			<key>name</key>
-			<string>keyword.operator.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(Call|Class|Const|Dim|Redim|Function|Sub|Property|End Property|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo)\b)</string>
-			<key>name</key>
-			<string>storage.type.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(Empty|False|Nothing|Null|True|Invalid)\b)</string>
-			<key>name</key>
-			<string>constant.language.brs</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>"</string>
 			<key>beginCaptures</key>
@@ -136,13 +112,31 @@
 					<key>name</key>
 					<string>constant.character.escape.apostrophe.brs</string>
 				</dict>
-				<dict>
-					<key>match</key>
-					<string>(roImageWidget|roResourceManager|roClockWidget)</string>
-					<key>name</key>
-					<string>entity.other.inherited-class.brs</string>
-				</dict>
 			</array>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b((RE(M|TURN)|GOTO|BLOCK IF|ST(OP|EP)|NEXT|I(N|F)|T(HEN|O)|DIM|PRINT|E(nd Function|ND(IF)?|LSE(IF)?|xit While)|F(unction|OR( EACH)?)|While))\b)</string>
+			<key>name</key>
+			<string>keyword.control.brs</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>=|&gt;=|&lt;zz|&gt;|&lt;|&lt;&gt;|\+|-|\*|\/|\^|&amp;|\b(?i:(And|Not|Or))\b</string>
+			<key>name</key>
+			<string>keyword.operator.brs</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(Call|Class|Const|Dim|Redim|Function|Sub|Property|End Property|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo)\b)</string>
+			<key>name</key>
+			<string>storage.type.brs</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(Empty|False|Nothing|Null|True|Invalid)\b)</string>
+			<key>name</key>
+			<string>constant.language.brs</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -159,10 +153,15 @@
 			<string>variable.other.brs</string>
 		</dict>
 		<dict>
-			<key>match</key>
-			<string>(?i:\b((if(XML(Element|List)|MessagePort|B(yteArray|oolean|rSub)|String(Ops)?|Int|Enum|Float|List|A(ssociativeArray|rray))|ro(R(ss(Parser|Article)|e(sourceManager|ctangle|ad(File|WriteFile)|gistry(Section)?))|G(pio(Button|ControlPort)|lobal)|XML(Element|List)|MessagePort|B(yteArray|oolean|r(Sub|ightPackage))|S(ystemTime|t(orageInfo|ring)|erialPort)|NetworkConfiguration|C(ontrol(Down|Up|Port)|lockWidget|reateFile)|T(imer|ouchScreen|ext(Field|Widget))|I(RRemote|n(t|valid)|mage(Player|Widget))|D(eviceInfo|at(eTime|agram(Receiver|Sender)))|Url(Transfer|Event)|Video(Mode|Input|Player|Event)|Keyboard(Press)?|Quadravox(Button|SNS5)|Float|List|A(ssociativeArray|udio(Player|Event)|ppendFile|rray))))\b)</string>
 			<key>name</key>
 			<string>support.class.brs</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#class_names</string>
+				</dict>
+			</array>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -195,6 +194,16 @@
 			<string>constant.numeric.brs</string>
 		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>class_names</key>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(if(XML(Element|List)|MessagePort|B(yteArray|oolean|rSub)|String(Ops)?|Int|Enum|Float|List|A(ssociativeArray|rray))|ro(R(ss(Parser|Article)|e(sourceManager|ctangle|ad(File|WriteFile)|gistry(Section)?))|G(pio(Button|ControlPort)|lobal)|XML(Element|List)|MessagePort|B(yteArray|oolean|r(Sub|ightPackage))|S(ystemTime|t(orageInfo|ring)|erialPort)|NetworkConfiguration|C(ontrol(Down|Up|Port)|lockWidget|reateFile)|T(imer|ouchScreen|ext(Field|Widget))|I(RRemote|n(t|valid)|mage(Player|Widget))|D(eviceInfo|at(eTime|agram(Receiver|Sender)))|Url(Transfer|Event)|Video(Mode|Input|Player|Event)|Keyboard(Press)?|Quadravox(Button|SNS5)|Float|List|A(ssociativeArray|udio(Player|Event)|ppendFile|rray)))\b)</string>
+			<key>name</key>
+			<string>support.class.brs.source</string>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>source.brs</string>
 	<key>uuid</key>
