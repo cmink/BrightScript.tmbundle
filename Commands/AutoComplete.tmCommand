@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>complete.rb</string>
+	<key>input</key>
+	<string>document</string>
+	<key>keyEquivalent</key>
+	<string>~</string>
+	<key>name</key>
+	<string>AutoComplete</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.brightscript meta.function.brightscript</string>
+	<key>uuid</key>
+	<string>EF072CE8-C482-40D5-846C-229DC0D25455</string>
+</dict>
+</plist>

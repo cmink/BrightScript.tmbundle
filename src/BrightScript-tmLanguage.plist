@@ -1,0 +1,93 @@
+{	scopeName = 'source.brightscript';
+  comment = 'BrightScript Language File';
+  fileTypes = ( 'brs', 'bas' );
+  foldingStartMarker = '(?i)^\s*(sub|if|f(or( each)?|unction)|while)\s*([a-zA-Z_]\w*)\s*(\(.*\)\s*)?$';
+  foldingStopMarker = '(?i)^\s*(next|e(nd(if| (sub|if|function))|xit( while)?))\s*$';
+  patterns = (
+    { include = '#functions'; },
+    { include = '#program_statements'; },
+    { include = '#operators'; },
+    { include = '#support_functions'; },
+    { include = '#storage_types'; },
+    { include = '#literals'; },
+    { include = '#constant_numeric'; },
+    { name = 'comment.line.apostrophe.brightscript';
+      match = "(').*$\n?";
+      captures = { 1 = { name = 'punctuation.definition.comment.brightscript'; }; };
+    },
+    { name = 'comment.line.rem.brightscript';
+      match = '^\s*?(?i:rem).*$\n?';
+      captures = { 1 = { name = 'punctuation.definition.comment.brightscript'; }; };
+    },
+    {	name = 'string.quoted.double.brightscript';
+      begin = '"';
+      end = '"';
+      patterns = (
+        {	name = 'constant.character.escape.brightscript';
+          match = '\\.';
+        },
+      );
+    },
+  );
+  repository = {
+    functions = {
+      name = 'meta.function.brightscript';
+      match = '^\s*((?i:function|sub))\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\)).*\n?';
+      captures = {
+        1 = { name = 'storage.type.function.brightscript'; };
+        2 = { name = 'entity.name.function.brightscript'; };
+        3 = { name = 'punctuation.definition.parameters.brightscript'; };
+        4 = { name = 'variable.parameter.function.brightscript'; }; // This need to be more complex, recursive?
+        5 = { name = 'punctuation.definition.parameters.brightscript'; };
+      };
+    };
+    storage_types = {
+      name = 'storage.type.brightscript';
+      match = '(?i:\b(string|in(te(rface|ger)|valid)|object|double|float|b(oolean|rsub))\b)';
+    };
+    support_functions = {
+      patterns = (
+        { include = '#support_builtin_functions'; },
+        { include = '#support_global_functions'; },
+        { include = '#support_global_string_functions'; },
+        { include = '#support_global_math_functions'; },
+      );
+    };
+    support_builtin_functions = {
+      name = 'support.functions.brightscript';
+      match = '(?i:\b(GetLastRun(RuntimeError|CompileError)|R(nd|un)|Box|Type)\b)';
+    };
+    support_global_functions = {
+      name = 'support.functions.brightscript';
+      match = '(?i:\b(Re(adAsciiFile|bootSystem)|GetInterface|MatchFiles|Sleep|C(opyFile|reate(Directory|Object))|Delete(Directory|File)|UpTime|FormatDrive|ListDir|W(ait|riteAsciiFile))\b)';
+    };
+    support_global_string_functions = {
+      name = 'support.functions.brightscript';
+      match = '(?i:\b(Right|Mid|Str(i(ng(i)?)?)?|Chr|Instr|UCase|Val|Asc|L(Case|e(n|ft)))\b)';
+    };
+    support_global_math_functions = {
+      name = 'support.functions.brightscript';
+      match = '(?i:\b(S(in|qr|gn)|C(sng|dbl|os)|Tan|Int|Exp|Fix|Log|A(tn|bs))\b)';
+    };
+    program_statements = {
+      name = 'keyword.control.brightscript';
+      match = '(?i:\b(s(t(op|ep)|ub)|next|i(n|f)|t(hen|o)|dim|print|e(nd(if| (sub|function))?|lse(if)?|xit while)|f(or( each)?|unction)|while|return|goto)\b)';
+    };
+    class = {
+      name = 'meta.class.brightscript';
+      match = '';
+    };
+    operators = {
+      name = 'keyword.operator.brightscript';
+      match = '=|>=|<zz|>|<|<>|\+|-|\*|\/|\^|&|\b(?i:(And|Not|Or))\b';
+    };
+    literals = {
+      name = 'constant.language.brightscript';
+      match = '(?i:\b(N(othing|ull)|True|Invalid|Empty|False)\b)';
+    };
+    constant_numeric = {
+      name = 'constant.numeric.brightscript';
+      match = '\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\b';
+    };
+  };
+}

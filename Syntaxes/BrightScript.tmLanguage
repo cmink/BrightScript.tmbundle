@@ -40,6 +40,14 @@
 			<string>#storage_types</string>
 		</dict>
 		<dict>
+			<key>include</key>
+			<string>#literals</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#constant_numeric</string>
+		</dict>
+		<dict>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -94,6 +102,13 @@
 			<key>name</key>
 			<string>meta.class.brightscript</string>
 		</dict>
+		<key>constant_numeric</key>
+		<dict>
+			<key>match</key>
+			<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\b</string>
+			<key>name</key>
+			<string>constant.numeric.brightscript</string>
+		</dict>
 		<key>functions</key>
 		<dict>
 			<key>captures</key>
@@ -129,12 +144,19 @@
 			<key>name</key>
 			<string>meta.function.brightscript</string>
 		</dict>
+		<key>literals</key>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(N(othing|ull)|True|Invalid|Empty|False)\b)</string>
+			<key>name</key>
+			<string>constant.language.brightscript</string>
+		</dict>
 		<key>operators</key>
 		<dict>
 			<key>match</key>
 			<string>=|&gt;=|&lt;zz|&gt;|&lt;|&lt;&gt;|\+|-|\*|\/|\^|&amp;|\b(?i:(And|Not|Or))\b</string>
 			<key>name</key>
-			<string>keyword.operator.brs</string>
+			<string>keyword.operator.brightscript</string>
 		</dict>
 		<key>program_statements</key>
 		<dict>
@@ -173,12 +195,23 @@
 					<key>include</key>
 					<string>#support_global_string_functions</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#support_global_math_functions</string>
+				</dict>
 			</array>
 		</dict>
 		<key>support_global_functions</key>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(Re(adAsciiFile|bootSystem)|GetInterface|MatchFiles|Sleep|C(opyFile|reate(Directory|Object))|Delete(Directory|File)|UpTime|FormatDrive|ListDir|W(ait|riteAsciiFile))\b)</string>
+			<key>name</key>
+			<string>support.functions.brightscript</string>
+		</dict>
+		<key>support_global_math_functions</key>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(S(in|qr|gn)|C(sng|dbl|os)|Tan|Int|Exp|Fix|Log|A(tn|bs))\b)</string>
 			<key>name</key>
 			<string>support.functions.brightscript</string>
 		</dict>

@@ -1,0 +1,23 @@
+foldingStartMarker
+------------------
+for
+for each
+While
+if
+Function
+Sub
+
+(sub|if|f(or( each)?|unction)|while)
+
+
+
+foldingStopMarker
+-----------------
+next
+Exit While
+endif
+end if
+End Function
+End Sub
+
+(next|e(nd(if| (sub|if|function))|xit( while)?))

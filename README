@@ -1,3 +1,4 @@
-BrightScript TextMate Language Definition for TextMate and Sublime Edit. Adapted from ASP.tmbundle [https://github.com/textmate/asp.tmbundle.git]
+BrightScript TextMate Language Definition for TextMate and Sublime Edit.
+Orginally adapted from ASP.tmbundle [https://github.com/textmate/asp.tmbundle.git].
 
-TODO: Remove non BrightScript Specific language definitions and add BrightScript specific stuff.
+Rewritten to better use the tmLanguage repositories for maintainability and re-use.

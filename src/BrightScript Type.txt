@@ -1,0 +1,11 @@
+boolean
+integer
+float
+double
+string
+object
+interface
+invalid
+brsub
+
+(string|in(te(rface|ger)|valid)|object|double|float|b(oolean|rsub))

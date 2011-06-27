@@ -1,0 +1,30 @@
+Statements (keyword.control.brightscript)
+
+dim
+end
+stop
+goto
+return
+for
+to
+step
+next
+for each
+in
+while
+exit while
+if
+then
+else
+elseif
+endif
+print
+function
+end function
+sub
+end sub
+
+(removed)
+rem
+
+(s(t(op|ep)|ub)|next|i(n|f)|t(hen|o)|dim|print|e(nd(if| (sub|function))?|lse(if)?|xit while)|f(or( each)?|unction)|while|return|goto)
