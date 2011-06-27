@@ -90,6 +90,10 @@
 					<key>name</key>
 					<string>constant.character.escape.brightscript</string>
 				</dict>
+				<dict>
+					<key>include</key>
+					<string>#class_roku_builtin</string>
+				</dict>
 			</array>
 		</dict>
 	</array>
@@ -101,6 +105,13 @@
 			<string></string>
 			<key>name</key>
 			<string>meta.class.brightscript</string>
+		</dict>
+		<key>class_roku_builtin</key>
+		<dict>
+			<key>match</key>
+			<string>(?i:\b(ro(Global|XML(Element|List)|MessagePort|B(yteArray|oolean|rSub)|String|In(t|valid)|Float|List|A(ssociativeArray|rray)))\b)</string>
+			<key>name</key>
+			<string>support.class.brightscript</string>
 		</dict>
 		<key>constant_numeric</key>
 		<dict>
@@ -177,7 +188,7 @@
 			<key>match</key>
 			<string>(?i:\b(GetLastRun(RuntimeError|CompileError)|R(nd|un)|Box|Type)\b)</string>
 			<key>name</key>
-			<string>support.functions.brightscript</string>
+			<string>support.function.brightscript</string>
 		</dict>
 		<key>support_functions</key>
 		<dict>
@@ -206,21 +217,21 @@
 			<key>match</key>
 			<string>(?i:\b(Re(adAsciiFile|bootSystem)|GetInterface|MatchFiles|Sleep|C(opyFile|reate(Directory|Object))|Delete(Directory|File)|UpTime|FormatDrive|ListDir|W(ait|riteAsciiFile))\b)</string>
 			<key>name</key>
-			<string>support.functions.brightscript</string>
+			<string>support.function.brightscript</string>
 		</dict>
 		<key>support_global_math_functions</key>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(S(in|qr|gn)|C(sng|dbl|os)|Tan|Int|Exp|Fix|Log|A(tn|bs))\b)</string>
 			<key>name</key>
-			<string>support.functions.brightscript</string>
+			<string>support.function.brightscript</string>
 		</dict>
 		<key>support_global_string_functions</key>
 		<dict>
 			<key>match</key>
 			<string>(?i:\b(Right|Mid|Str(i(ng(i)?)?)?|Chr|Instr|UCase|Val|Asc|L(Case|e(n|ft)))\b)</string>
 			<key>name</key>
-			<string>support.functions.brightscript</string>
+			<string>support.function.brightscript</string>
 		</dict>
 	</dict>
 	<key>scopeName</key>

@@ -15,6 +15,7 @@ roInvalid
 roXMLElement
 roXMLList
 
+ro(Global|XML(Element|List)|MessagePort|B(yteArray|oolean|rSub)|String|In(t|valid)|Float|List|A(ssociativeArray|rray))
 
 Core Interfaces
 ----------
