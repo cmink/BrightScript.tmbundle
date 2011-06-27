@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>comment</key>
-	<string>BrightScript Dictionary</string>
+	<string>BrightScript Language File</string>
 	<key>fileTypes</key>
 	<array>
 		<string>brs</string>
@@ -20,38 +20,24 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.function.brs</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.function.brs</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.brs</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.function.brs</string>
-				</dict>
-				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.brs</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>^\s*((?i:function|sub))\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\)).*\n?</string>
-			<key>name</key>
-			<string>meta.function.brs</string>
+			<key>include</key>
+			<string>#functions</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#program_statements</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#operators</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#support_functions</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#storage_types</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -59,13 +45,13 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.brs</string>
+					<string>punctuation.definition.comment.brightscript</string>
 				</dict>
 			</dict>
 			<key>match</key>
 			<string>(').*$\n?</string>
 			<key>name</key>
-			<string>comment.line.apostrophe.brs</string>
+			<string>comment.line.apostrophe.brightscript</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -73,139 +59,139 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.brs</string>
+					<string>punctuation.definition.comment.brightscript</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*?(REM|Rem|rem).*$\n?</string>
+			<string>^\s*?(?i:rem).*$\n?</string>
 			<key>name</key>
-			<string>comment.line.rem.brs</string>
+			<string>comment.line.rem.brightscript</string>
 		</dict>
 		<dict>
 			<key>begin</key>
 			<string>"</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.brs</string>
-				</dict>
-			</dict>
 			<key>end</key>
-			<string>"(?!")</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.brs</string>
-				</dict>
-			</dict>
+			<string>"</string>
 			<key>name</key>
-			<string>string.quoted.double.brs</string>
+			<string>string.quoted.double.brightscript</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
-					<string>""</string>
+					<string>\\.</string>
 					<key>name</key>
-					<string>constant.character.escape.apostrophe.brs</string>
+					<string>constant.character.escape.brightscript</string>
 				</dict>
 			</array>
 		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>class</key>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b((RE(M|TURN)|GOTO|BLOCK IF|ST(OP|EP)|NEXT|I(N|F)|T(HEN|O)|DIM|PRINT|E(nd Function|ND(IF)?|LSE(IF)?|xit While)|F(unction|OR( EACH)?)|While))\b)</string>
+			<string></string>
 			<key>name</key>
-			<string>keyword.control.brs</string>
+			<string>meta.class.brightscript</string>
 		</dict>
+		<key>functions</key>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.brightscript</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.brightscript</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.brightscript</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.function.brightscript</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.brightscript</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>^\s*((?i:function|sub))\s*([a-zA-Z_]\w*)\s*(\()([^)]*)(\)).*\n?</string>
+			<key>name</key>
+			<string>meta.function.brightscript</string>
+		</dict>
+		<key>operators</key>
 		<dict>
 			<key>match</key>
 			<string>=|&gt;=|&lt;zz|&gt;|&lt;|&lt;&gt;|\+|-|\*|\/|\^|&amp;|\b(?i:(And|Not|Or))\b</string>
 			<key>name</key>
 			<string>keyword.operator.brs</string>
 		</dict>
+		<key>program_statements</key>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(Call|Class|Const|Dim|Redim|Function|Sub|Property|End Property|End sub|End Function|Set|Let|Get|New|Randomize|Option Explicit|On Error Resume Next|On Error GoTo)\b)</string>
+			<string>(?i:\b(s(t(op|ep)|ub)|next|i(n|f)|t(hen|o)|dim|print|e(nd(if| (sub|function))?|lse(if)?|xit while)|f(or( each)?|unction)|while|return|goto)\b)</string>
 			<key>name</key>
-			<string>storage.type.brs</string>
+			<string>keyword.control.brightscript</string>
 		</dict>
+		<key>storage_types</key>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(Empty|False|Nothing|Null|True|Invalid)\b)</string>
+			<string>(?i:\b(string|in(te(rface|ger)|valid)|object|double|float|b(oolean|rsub))\b)</string>
 			<key>name</key>
-			<string>constant.language.brs</string>
+			<string>storage.type.brightscript</string>
 		</dict>
+		<key>support_builtin_functions</key>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.variable.brs</string>
-				</dict>
-			</dict>
 			<key>match</key>
-			<string>(\$)[a-zA-Z_x7f-xff][a-zA-Z0-9_x7f-xff]*?\b</string>
+			<string>(?i:\b(GetLastRun(RuntimeError|CompileError)|R(nd|un)|Box|Type)\b)</string>
 			<key>name</key>
-			<string>variable.other.brs</string>
+			<string>support.functions.brightscript</string>
 		</dict>
+		<key>support_functions</key>
 		<dict>
-			<key>name</key>
-			<string>support.class.brs</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#class_names</string>
+					<string>#support_builtin_functions</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#support_global_functions</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#support_global_string_functions</string>
 				</dict>
 			</array>
 		</dict>
+		<key>support_global_functions</key>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(Contents|StaticObjects|ClientCertificate|Cookies|Form|QueryString|ServerVariables)\b)</string>
+			<string>(?i:\b(Re(adAsciiFile|bootSystem)|GetInterface|MatchFiles|Sleep|C(opyFile|reate(Directory|Object))|Delete(Directory|File)|UpTime|FormatDrive|ListDir|W(ait|riteAsciiFile))\b)</string>
 			<key>name</key>
-			<string>support.class.collection.brs</string>
+			<string>support.functions.brightscript</string>
 		</dict>
+		<key>support_global_string_functions</key>
 		<dict>
 			<key>match</key>
-			<string>(?i:\b(TotalBytes|Buffer|CacheControl|Charset|ContentType|Expires|ExpiresAbsolute|IsClientConnected|PICS|Status|ScriptTimeout|CodePage|LCID|SessionID|Timeout)\b)</string>
+			<string>(?i:\b(Right|Mid|Str(i(ng(i)?)?)?|Chr|Instr|UCase|Val|Asc|L(Case|e(n|ft)))\b)</string>
 			<key>name</key>
-			<string>support.constant.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b((R(nd|ight|un|e(set(Index)?|ad(File|AsciiFile)|move(Head|Tail|Index)|bootSystem))|Ge(nXML(Header)?|t(Message|Bo(olean|dy)|S(tring|ignedByte|ub)|Head|Name(dElements)?|ChildElements|T(ext|ail)|In(t(erface)?|dex)|Ent(ityEncode|ry)|Float|LastRun(RuntimeError|CompileError)|Attributes))|M(id|D5|atchFiles)|Bo(olean|x)|S(hift|tr(i(ng)?)?|i(n|mplify)|et(Resize|ModeCaseSensitive|Bo(olean|dy)|S(tring|ub)|Name|Int|Entry|Float)|qr|leep|gn)|HasAttribute|Next|C(sng|hr|o(s|unt|pyFile)|dbl|lear|reate(Object|Directory))|T(ype|o(Base64String|HexString|kenize|AsciiString)|an|rim)|I(s(N(ext|ame)|Empty|LittleEndianCPU)|n(str|t(e(rface|ger))?|valid))|Object|D(ynamic|o(uble|esExist)|elete(Directory|File)?)|U(nshift|Case|pTime)|P(o(stMessage|p)|ush|eek|arse)|Exp|V(oid|al)|F(ix|ormatDrive|unction|loat|rom(Base64String|HexString|AsciiString))|W(hile|ait(Message)?|rite(File|AsciiFile))|L(istDir|o(okup|g)|Case|e(n|ft))|A(s(c)?|tn|dd(Replace|BodyElement|Head|Tail|Element(WithBody)?|Attribute)|ppend(String|File)?|bs)))\b)</string>
-			<key>name</key>
-			<string>support.function.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(Application_OnEnd|Application_OnStart|OnTransactionAbort|OnTransactionCommit|Session_OnEnd|Session_OnStart|Class_Initialize|Class_Terminate)\b)</string>
-			<key>name</key>
-			<string>support.function.event.brs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\b</string>
-			<key>name</key>
-			<string>constant.numeric.brs</string>
-		</dict>
-	</array>
-	<key>repository</key>
-	<dict>
-		<key>class_names</key>
-		<dict>
-			<key>match</key>
-			<string>(?i:\b(if(XML(Element|List)|MessagePort|B(yteArray|oolean|rSub)|String(Ops)?|Int|Enum|Float|List|A(ssociativeArray|rray))|ro(R(ss(Parser|Article)|e(sourceManager|ctangle|ad(File|WriteFile)|gistry(Section)?))|G(pio(Button|ControlPort)|lobal)|XML(Element|List)|MessagePort|B(yteArray|oolean|r(Sub|ightPackage))|S(ystemTime|t(orageInfo|ring)|erialPort)|NetworkConfiguration|C(ontrol(Down|Up|Port)|lockWidget|reateFile)|T(imer|ouchScreen|ext(Field|Widget))|I(RRemote|n(t|valid)|mage(Player|Widget))|D(eviceInfo|at(eTime|agram(Receiver|Sender)))|Url(Transfer|Event)|Video(Mode|Input|Player|Event)|Keyboard(Press)?|Quadravox(Button|SNS5)|Float|List|A(ssociativeArray|udio(Player|Event)|ppendFile|rray)))\b)</string>
-			<key>name</key>
-			<string>support.class.brs.source</string>
+			<string>support.functions.brightscript</string>
 		</dict>
 	</dict>
 	<key>scopeName</key>
-	<string>source.brs</string>
+	<string>source.brightscript</string>
 	<key>uuid</key>
 	<string>291022B4-6B1D-11D9-90EB-000D93589AF6</string>
 </dict>
