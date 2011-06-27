@@ -26,6 +26,7 @@
         {	name = 'constant.character.escape.brightscript';
           match = '\\.';
         },
+        { include = '#class_roku_builtin'; },
       );
     },
   );
@@ -54,19 +55,19 @@
       );
     };
     support_builtin_functions = {
-      name = 'support.functions.brightscript';
+      name = 'support.function.brightscript';
       match = '(?i:\b(GetLastRun(RuntimeError|CompileError)|R(nd|un)|Box|Type)\b)';
     };
     support_global_functions = {
-      name = 'support.functions.brightscript';
+      name = 'support.function.brightscript';
       match = '(?i:\b(Re(adAsciiFile|bootSystem)|GetInterface|MatchFiles|Sleep|C(opyFile|reate(Directory|Object))|Delete(Directory|File)|UpTime|FormatDrive|ListDir|W(ait|riteAsciiFile))\b)';
     };
     support_global_string_functions = {
-      name = 'support.functions.brightscript';
+      name = 'support.function.brightscript';
       match = '(?i:\b(Right|Mid|Str(i(ng(i)?)?)?|Chr|Instr|UCase|Val|Asc|L(Case|e(n|ft)))\b)';
     };
     support_global_math_functions = {
-      name = 'support.functions.brightscript';
+      name = 'support.function.brightscript';
       match = '(?i:\b(S(in|qr|gn)|C(sng|dbl|os)|Tan|Int|Exp|Fix|Log|A(tn|bs))\b)';
     };
     program_statements = {
@@ -76,6 +77,10 @@
     class = {
       name = 'meta.class.brightscript';
       match = '';
+    };
+    class_roku_builtin = {
+      name = "support.class.brightscript";
+      match = '(?i:\b(ro(Global|XML(Element|List)|MessagePort|B(yteArray|oolean|rSub)|String|In(t|valid)|Float|List|A(ssociativeArray|rray)))\b)';
     };
     operators = {
       name = 'keyword.operator.brightscript';
