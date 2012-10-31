@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>contactName</key>
+	<string>Craig Mink</string>
+	<key>description</key>
+	<string>BrightScript Language Syntax for Roku and BrightSign programming.</string>
 	<key>name</key>
 	<string>BrightScript</string>
 	<key>ordering</key>

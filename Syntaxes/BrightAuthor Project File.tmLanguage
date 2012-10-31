@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>comment</key>
+	<string>BrightAuthor Project File</string>
+	<key>fileTypes</key>
+	<array>
+		<string>bpf</string>
+	</array>
+	<key>name</key>
+	<string>BrightAuthor Project File</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>text.xml</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(if|while|for|return)\b</string>
+			<key>name</key>
+			<string>keyword.control.untitled</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>end</key>
+			<string>"</string>
+			<key>name</key>
+			<string>string.quoted.double.untitled</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\.</string>
+					<key>name</key>
+					<string>constant.character.escape.untitled</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.brightauthorproject</string>
+	<key>uuid</key>
+	<string>DE918636-0D2A-478E-904F-421E661E283F</string>
+</dict>
+</plist>
