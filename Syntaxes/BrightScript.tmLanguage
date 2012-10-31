@@ -71,7 +71,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\s*?(?i:rem).*$\n?</string>
+			<string>^\s*?(?i:rem\s).*$\n?</string>
 			<key>name</key>
 			<string>comment.line.rem.brightscript</string>
 		</dict>
