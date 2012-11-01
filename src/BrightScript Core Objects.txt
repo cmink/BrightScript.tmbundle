@@ -136,3 +136,5 @@ Void
 WaitMessage
 While
 WriteFile
+
+(R(ight|e(set(Index)?|adFile|move(Head|Tail|Index)))|Ge(nXML(Header)?|t(Message|Bo(olean|dy)|S(tring|ignedByte|ub)|Head|Name(dElements)?|ChildElements|T(ext|ail)|In(t|dex)|Ent(ityEncode|ry)|Float|Attributes))|M(id|D5)|Boolean|S(hift|tr(i(ng)?)?|implify|et(Resize|ModeCaseSensitive|Bo(olean|dy)|S(tring|ub)|Name|Int|Entry|Float))|HasAttribute|Next|C(hr|ount|lear)|T(o(Base64String|HexString|kenize|AsciiString)|rim)|I(s(N(ext|ame)|Empty|LittleEndianCPU)|n(str|te(rface|ger)|valid))|Object|D(ynamic|o(uble|esExist)|elete)|U(nshift|Case)|P(o(stMessage|p)|ush|eek|arse)|Void|F(unction|loat|rom(Base64String|HexString|AsciiString))|W(hile|aitMessage|riteFile)|L(ookup|e(n|ft))|A(s(c)?|dd(Replace|BodyElement|Head|Tail|Element(WithBody)?|Attribute)|ppend(String|File)?))
