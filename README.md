@@ -1,12 +1,12 @@
 BrightScript Language Definition Bundle
 =======================================
 
-Get BrightScript syntax highlighting in TextMate or Sublime Text with this Language Definition bundle.
+Get BrightScript syntax highlighting in [TextMate](http://macromates.com/) or [Sublime Text](http://www.sublimetext.com/) with this Language Definition bundle.
 
 Installation for TextMate
 -------------------------
 
-Clone this bundle into your TextMate/Bundles application 
+Clone this bundle into your TextMate/Bundles directory:
 
     [ ! -f ~/Library/Application\ Support/TextMate/Bundles ] && mkdir -p ~/Library/Application\ Support/TextMate/Bundles
     cd ~/Library/Application\ Support/TextMate/Bundles
