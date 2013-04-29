@@ -4,6 +4,21 @@
 <dict>
 	<key>author</key>
 	<string>Michael Sheets</string>
+	<key>gutterSettings</key>
+	<dict>
+		<key>background</key>
+		<string>#2F2F31</string>
+		<key>divider</key>
+		<string>#414143</string>
+		<key>foreground</key>
+		<string>#8F8F8F</string>
+		<key>selectionBackground</key>
+		<string>#414143</string>
+		<key>selectionBorder</key>
+		<string>#484848</string>
+		<key>selectionForeground</key>
+		<string>#BABABA</string>
+	</dict>
 	<key>name</key>
 	<string>Mustang</string>
 	<key>settings</key>
@@ -183,7 +198,7 @@
 			<key>name</key>
 			<string>♦ Embedded Source (Bright)</string>
 			<key>scope</key>
-			<string>meta.embedded.line</string>
+			<string>meta.embedded.line, source.ruby.embedded</string>
 			<key>settings</key>
 			<dict>
 				<key>background</key>
@@ -269,23 +284,8 @@
 			<string>support.function</string>
 			<key>settings</key>
 			<dict>
-				<key>fontStyle</key>
-				<string></string>
 				<key>foreground</key>
-				<string>#B9D3EE</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ Support.function.component</string>
-			<key>scope</key>
-			<string>support.function.component</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#778FB8</string>
+				<string>#ACACCA</string>
 			</dict>
 		</dict>
 		<dict>
@@ -332,6 +332,28 @@
 			<dict>
 				<key>foreground</key>
 				<string>#494949</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>✘ Meta.tag.«all»</string>
+			<key>scope</key>
+			<string>declaration.tag, declaration.tag entity, meta.tag, meta.tag entity</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ABABAB</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>✘ Meta.tag.inline</string>
+			<key>scope</key>
+			<string>declaration.tag.inline, declaration.tag.inline entity, source entity.name.tag, source entity.other.attribute-name, meta.tag.inline, meta.tag.inline entity</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ABABAB</string>
 			</dict>
 		</dict>
 		<dict>
@@ -447,7 +469,7 @@
 				<key>background</key>
 				<string>#420E09</string>
 				<key>foreground</key>
-				<string>#F8F8F8</string>
+				<string>#F92672</string>
 			</dict>
 		</dict>
 		<dict>
@@ -460,7 +482,7 @@
 				<key>background</key>
 				<string>#4A410D</string>
 				<key>foreground</key>
-				<string>#F8F8F8</string>
+				<string>#FFEE2B</string>
 			</dict>
 		</dict>
 		<dict>
@@ -473,7 +495,7 @@
 				<key>background</key>
 				<string>#253B22</string>
 				<key>foreground</key>
-				<string>#F8F8F8</string>
+				<string>#A6E22E</string>
 			</dict>
 		</dict>
 		<dict>
