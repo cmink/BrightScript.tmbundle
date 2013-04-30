@@ -224,7 +224,7 @@
 			<key>name</key>
 			<string>♦ String embedded-source</string>
 			<key>scope</key>
-			<string>string meta.embedded</string>
+			<string>string meta.embedded, source.ruby.embedded.html</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
