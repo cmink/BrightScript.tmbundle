@@ -5,24 +5,7 @@
 	<key>author</key>
 	<string>Michael Sheets</string>
 	<key>name</key>
-	<string>Mustang</string>
-	<key>description</key>
-	<string>Modified by Craig Mink with custom additions</string>
-	<key>gutterSettings</key>
-	<dict>
-		<key>background</key>
-		<string>#2F2F31</string>
-		<key>divider</key>
-		<string>#414143</string>
-		<key>foreground</key>
-		<string>#8F8F8F</string>
-		<key>selectionBackground</key>
-		<string>#414143</string>
-		<key>selectionBorder</key>
-		<string>#484848</string>
-		<key>selectionForeground</key>
-		<string>#BABABA</string>
-	</dict>
+	<string>Mustang (Original)</string>
 	<key>settings</key>
 	<array>
 		<dict>
@@ -40,17 +23,6 @@
 				<string>#FFFFFF08</string>
 				<key>selection</key>
 				<string>#DDF0FF33</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>Foldings</string>
-			<key>scope</key>
-			<string>deco.folding</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#5A6A65</string>
 			</dict>
 		</dict>
 		<dict>
@@ -187,146 +159,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>♦ Embedded Source</string>
-			<key>scope</key>
-			<string>meta.embedded.block, punctuation.whitespace.embedded, source.ruby.rails.embedded, source.ruby.embedded.html</string>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string>#B0B3BA22</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ Embedded Source (Bright)</string>
-			<key>scope</key>
-			<string>meta.embedded.line</string>
-			<key>settings</key>
-			<dict>
-				<key>background</key>
-				<string>#B1B3BA33</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ Entity inherited-class</string>
-			<key>scope</key>
-			<string>entity.other.inherited-class</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string>italic</string>
-				<key>foreground</key>
-				<string>#9B5C2E</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ String embedded-source</string>
-			<key>scope</key>
-			<string>string meta.embedded</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#DAEFA3</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ String constant</string>
-			<key>scope</key>
-			<string>string constant source.ruby</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#DDF2A4</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ String.regexp</string>
-			<key>scope</key>
-			<string>string.regexp</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#E9C062</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ String.regexp.«special»</string>
-			<key>scope</key>
-			<string>string.regexp constant.character.escape, string.regexp source.ruby.embedded, string.regexp string.regexp.arbitrary-repitition</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#CF7D34</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ String variable</string>
-			<key>scope</key>
-			<string>string variable</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#8A9A95</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ Support.function</string>
-			<key>scope</key>
-			<string>support.function</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#ACACCA</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>♦ Support.constant</string>
-			<key>scope</key>
-			<string>support.constant</string>
-			<key>settings</key>
-			<dict>
-				<key>fontStyle</key>
-				<string></string>
-				<key>foreground</key>
-				<string>#CF6A4C</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>c C/C++ Preprocessor Line</string>
-			<key>scope</key>
-			<string>meta.preprocessor.c</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#8996A8</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>c C/C++ Preprocessor Directive</string>
-			<key>scope</key>
-			<string>meta.preprocessor.c keyword</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#AFC4DB</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>✘ Doctype/XML Processing</string>
 			<key>scope</key>
 			<string>meta.tag.sgml.doctype, meta.tag.sgml.doctype entity, meta.tag.sgml.doctype string, meta.tag.preprocessor.xml, meta.tag.preprocessor.xml entity, meta.tag.preprocessor.xml string</string>
@@ -334,28 +166,6 @@
 			<dict>
 				<key>foreground</key>
 				<string>#494949</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>✘ Meta.tag.«all»</string>
-			<key>scope</key>
-			<string>declaration.tag, declaration.tag entity, meta.tag, meta.tag entity</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#ABABAB</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>✘ Meta.tag.inline</string>
-			<key>scope</key>
-			<string>declaration.tag.inline, declaration.tag.inline entity, source entity.name.tag, source entity.other.attribute-name, meta.tag.inline, meta.tag.inline entity</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#ABABAB</string>
 			</dict>
 		</dict>
 		<dict>
@@ -471,7 +281,7 @@
 				<key>background</key>
 				<string>#420E09</string>
 				<key>foreground</key>
-				<string>#F92672</string>
+				<string>#F8F8F8</string>
 			</dict>
 		</dict>
 		<dict>
@@ -484,7 +294,7 @@
 				<key>background</key>
 				<string>#4A410D</string>
 				<key>foreground</key>
-				<string>#FFEE2B</string>
+				<string>#F8F8F8</string>
 			</dict>
 		</dict>
 		<dict>
@@ -497,7 +307,7 @@
 				<key>background</key>
 				<string>#253B22</string>
 				<key>foreground</key>
-				<string>#A6E22E</string>
+				<string>#F8F8F8</string>
 			</dict>
 		</dict>
 		<dict>
@@ -524,6 +334,6 @@
 		</dict>
 	</array>
 	<key>uuid</key>
-	<string>48bd74d6-5917-4a13-8fcd-3cef38056b54</string>
+	<string>55357096-79D9-42E2-8B9A-9DF7DBA132FD</string>
 </dict>
 </plist>
