@@ -23,4 +23,9 @@ Sublime Text users can do similarly by cloning the repository into the Packages 
 
 Then start Sublime Text.
 
+Customized Mustang theme that is more BrightScript friendly
+-----------------------------------------------------------
+
+I've moved the theme out of this repository and into a separate repository where it belongs. It is the TextMate adapted Mustang theme with some custom colors for the BrightScript language. Get it here [Mustang.tmbundle](http://github.com/cmink/Mustang.tmbundle).
+
 This bundle was orginally adapted from ASP.tmbundle [https://github.com/textmate/asp.tmbundle.git](https://github.com/textmate/asp.tmbundle.git).
