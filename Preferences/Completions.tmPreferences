@@ -144,13 +144,17 @@
 			<string>roBoolean</string>
 			<string>roBrSub</string>
 			<string>roByteArray</string>
+			<string>roDatagramEvent</string>
 			<string>roFloat</string>
 			<string>roGlobal</string>
 			<string>roInt</string>
 			<string>roInvalid</string>
 			<string>roList</string>
 			<string>roMessagePort</string>
+			<string>roRegEx</string>
 			<string>roString</string>
+			<string>roTimerEvent</string>
+			<string>roVideoEvent</string>
 			<string>roXMLElement</string>
 			<string>roXMLList</string>
 			<string>Run</string>
