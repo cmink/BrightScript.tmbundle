@@ -23,6 +23,13 @@ Sublime Text users can do similarly by cloning the repository into the Packages 
 
 Then start Sublime Text.
 
+Installation for Atom
+---------------------------
+
+Atom users can convert the bundle using the following syntax:
+
+    apm init --package ~/.atom/packages/language-brightscript --convert https://github.com/cmink/BrightScript.tmbundle
+
 BrightScript Friendly Customized Mustang Theme
 ----------------------------------------------
 
