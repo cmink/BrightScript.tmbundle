@@ -1,9 +1,13 @@
 Statements (keyword.control.brightscript)
 
-goto
+library
 dim
 end
 stop
+goto
+
+rem
+print
 
 for
 to
@@ -13,6 +17,7 @@ exit for
 
 for each
 in
+
 while
 end while
 exit while
@@ -31,8 +36,6 @@ return
 sub
 end sub
 
-print
-rem
 
 ---
-(s(t(op|ep)|ub)|i(n|f)|t(hen|o)|dim|print|e(nd(if| (sub|f(or|unction)|while))?|lse(if)?|xit (for|while))|f(or( each)?|unction)|as|while|re(turn|m)|goto)?
+(s(t(op|ep)|ub)|i(n|f)|t(hen|o)|dim|print|e(nd(if| (sub|f(or|unction)|while))?|lse(if)?|xit (for|while))|f(or( each)?|unction)|as|while|library|re(turn|m)|goto)

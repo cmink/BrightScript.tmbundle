@@ -2,16 +2,19 @@ Core Roku Objects
 -----------------
 roArray
 roAssociativeArray
-roList
+roBoolean
+roBrSub
 roByteArray
-roMessagePort
+roDouble
+roFloat
+roFunction
 roGlobal
 roInt
-roFloat
-roString
-roBrSub
-roBoolean
+roIntrinsicDouble
 roInvalid
+roList
+roMessagePort
+roString
 roXMLElement
 roXMLList
 
