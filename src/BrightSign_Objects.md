@@ -1,4 +1,4 @@
-Presentation and Widget Objects
+Presentation and Widget Objects (support.class.brightscript)
 -------------------------------
 roAudioEvent
 roAudioEventMx
@@ -28,14 +28,14 @@ roVideoInput
 roVideoMode
 roVideoPlayer
 
-File Objects
+File Objects (support.class.brightscript)
 ------------
 roAppendFile
 roCreateFile
 roReadFile
 roReadWriteFile
 
-Hashing and Storage Objects
+Hashing and Storage Objects (support.class.brightscript)
 ---------------------------
 roBlockCipher
 roBrightPackage

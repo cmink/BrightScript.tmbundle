@@ -20,6 +20,46 @@ roXMLList
 
 ro(Global|XML(Element|List)|MessagePort|B(yteArray|oolean|rSub)|String|In(t|valid)|Float|List|A(ssociativeArray|rray))
 
+roArray Interfaces and Methods
+------------------------------
+ifArray
+- Peek() As Dynamic
+- Pop() As Dynamic
+- Push(a As Dynamic)
+- Shift() As Dynamic
+- Unshift(a As Dynamic)
+- Delete(a As Integer) As Boolean
+- Count() As Integer
+- Clear()
+- Append(a As Object)
+ifEnum
+- Reset()
+- Next() As Dynamic
+- IsNext() As Boolean
+- IsEmpty() As Boolean
+ifArrayGet
+- GetEntry(a As Integer) As Dynamic
+ifArraySet
+- SetEntry(a As Integer, b As Dynamic)
+
+
+roAssociativeArray Interfaces and Methods
+-----------------------------------------
+ifEnum
+- Reset() As Void
+- Next() As Dynamic
+- IsNext() As Boolean
+- IsEmpty() As Boolean
+ifAssociativeArray
+- AddReplace(key As String, value As Object) As Void
+- Lookup(key As String) As Object
+- DoesExist(key As String) As Boolean
+- Delete(key As String) As Boolean
+- Clear() As Void
+- SetModeCaseSensitive() As Void
+- LookupCi(a As String) As Dynamic
+- Append(a As Object) As Void
+
 Core Interfaces
 ----------
 ifArray
